@@ -8,19 +8,25 @@
     </head>
     
 <body>
-     <dev class="container">   
-    <h1 class="text-centre mt-2 mb-4">Venkatesh carrers!</h1>
-    <h2><u>About Venkatesh Carrers</u></h2>
+     <dev class="container-fluid">   
+    <h1  class="text-center">Venkatesh carrers!</h1>
+    <h2 class="text-center"><u>About Venkatesh Carrers</u></h2>
     
     <p font-family : Roboto;>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui libero, laoreet a lorem sed, finibus luctus enim. Donec porttitor porta lorem, eu accumsan velit pretium sed. Cras posuere neque non scelerisque molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Morbi facilisis congue lacus id vestibulum. Nullam et odio ac orci dignissim lobortis id eget erat. In imperdiet id turpis ac dictum. Suspendisse ornare at magna sed rutrum. Duis consectetur augue ac efficitur fermentum. Nunc in rhoncus quam. Vivamus luctus in est non pulvinar. Vestibulum vestibulum id nisl nec efficitur. Vestibulum tempor magna velit, eu porttitor turpis mattis non. Suspendisse varius dictum ligula vitae aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
-<h2><u>Open Positions</u></h2>
+<h2 class="text-center"><u>Open Positions</u></h2>
 <P>
-    TODO - show Job list
+    <div>
+    {% for job in jobs%}
+    <div>
+       {% include 'jobitem.html' %}
+    </div>
+    {% endfor %}
+    </div>
 </P>
-<button>Contact us</button>
+<button type="button" class="btn btn-primary">Contact us</button>
 
-<h5> Copyright 2023,Venkatesh</h5>
+<h5 class="text-center"> Copyright 2023,Venkatesh</h5>
 </dev>         
 </body>
 </html>
